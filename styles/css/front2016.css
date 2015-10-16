@@ -114,7 +114,7 @@ header h1 {
 header h3 {
   font-weight: 200;
   color: #a9a9a9;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 header .social {
   margin: 0 0 1.5rem 0;
@@ -176,7 +176,7 @@ section.about ul li:first-child:before {
   margin-right: 0em;
 }
 section.about p {
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.3em;
 }
 section.location {
@@ -301,7 +301,7 @@ section.map h1 {
   margin-bottom: 12px;
 }
 section.map p {
-  font-weight: 200;
+  font-weight: 300;
 }
 section.features {
   text-align: center;
@@ -384,5 +384,5 @@ footer a:hover {
 footer .build-by {
   font-size: 0.8em;
   font-weight: 600;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
