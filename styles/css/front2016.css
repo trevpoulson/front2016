@@ -104,7 +104,7 @@ header {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url(../images/header-background-sm.jpg);
+  background-image: url(../../images/header-background-sm.jpg);
 }
 header h1 {
   font-weight: 200;
@@ -134,7 +134,7 @@ section.about {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url(../images/about-background-sm.jpg);
+  background-image: url(../../images/about-background-sm.jpg);
   color: #ffffff;
   text-align: center;
 }
@@ -183,7 +183,7 @@ section.location {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url(../images/location-background-sm.jpg);
+  background-image: url(../../images/location-background-sm.jpg);
   background-attachment: initial;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -234,7 +234,7 @@ section.reserve {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url(../images/reserve-background-sm.jpg);
+  background-image: url(../../images/reserve-background-sm.jpg);
   text-align: center;
 }
 section.reserve h2 {
@@ -251,7 +251,7 @@ section.reserve h3 {
   line-height: 1.4;
 }
 section.founders {
-  background: url(../images/founders-background-sm.jpg) 50% no-repeat;
+  background: url(../../images/founders-background-sm.jpg) 50% no-repeat;
   text-align: center;
   padding-top: 86px;
   padding-bottom: 86px;
@@ -271,7 +271,7 @@ section.founders h3 {
   line-height: 1.4;
 }
 section.map {
-  background: url(../images/map-background-sm.jpg) 50% no-repeat;
+  background: url(../../images/map-background-sm.jpg) 50% no-repeat;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 160px;
