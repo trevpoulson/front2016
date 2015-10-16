@@ -103,7 +103,6 @@ nav img {
 header {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-image: url(../../images/header-background-sm.jpg);
 }
 header h1 {
@@ -133,7 +132,6 @@ header .social .icon img:hover {
 section.about {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-image: url(../../images/about-background-sm.jpg);
   color: #ffffff;
   text-align: center;
@@ -182,7 +180,6 @@ section.about p {
 section.location {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-image: url(../../images/location-background-sm.jpg);
   background-attachment: initial;
   padding-top: 3rem;
@@ -233,7 +230,6 @@ section.highlights video {
 section.reserve {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-image: url(../../images/reserve-background-sm.jpg);
   text-align: center;
 }
