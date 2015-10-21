@@ -4,10 +4,51 @@
 body {
   font-family: "proxima-nova", sans-serif;
   font-size: 16px;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body {
+    font-size: 36px;
+  }
 }
 * {
   -webkit-transition: 0.3s cubic-bezier(0.76, 0.01, 0.3, 1);
   transition: 0.3s cubic-bezier(0.76, 0.01, 0.3, 1);
+  box-sizing: inherit;
+}
+@media screen and (min-width: 1200px) {
+  .row {
+    display: flex;
+    align-items: stretch;
+  }
+}
+.content {
+  margin: 0 auto;
+}
+@media screen and (min-width: 600px) {
+  .content {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .content {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content {
+    max-width: 1200px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .content {
+    max-width: 1500px;
+  }
 }
 .btn--orange {
   display: inline-block;
@@ -38,6 +79,7 @@ body {
   border: solid 2px #ff7d00;
   color: #ff7d00;
   font-size: 1em;
+  outline: none;
 }
 .btn--orange-outline:hover {
   background-color: rgba(255, 125, 0, 0.2);
@@ -73,18 +115,18 @@ h6,
 p,
 ul,
 ol {
-  margin: 0 0 1.5rem 0;
+  margin: 0;
 }
-h1:last-child,
-h2:last-child,
-h3:last-child,
-h4:last-child,
-h5:last-child,
-h6:last-child,
-p:last-child,
-ul:last-child,
-ol:last-child {
-  margin-bottom: 0;
+h1:not(:last-child),
+h2:not(:last-child),
+h3:not(:last-child),
+h4:not(:last-child),
+h5:not(:last-child),
+h6:not(:last-child),
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
+  margin: 0 0 1.5rem 0;
 }
 .hidden {
   display: none;
@@ -94,29 +136,111 @@ section,
 footer {
   padding: 3rem 1.5rem;
 }
+@media screen and (min-width: 600px) {
+  header,
+  section,
+  footer {
+    padding: 3rem ;
+  }
+}
+@media screen and (min-width: 900px) {
+  header,
+  section,
+  footer {
+    padding: 6rem 3rem ;
+  }
+}
 nav {
   margin-bottom: 2rem;
 }
 nav img {
-  width: 180px;
+  width: 12rem;
+}
+@media screen and (min-width: 600px) {
+  nav img {
+    width: 16rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  nav img {
+    margin-bottom: 4rem;
+  }
 }
 header {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
   background-image: url(../../images/header-background-sm.jpg);
 }
+@media screen and (min-width: 900px) {
+  header {
+    background-image: url(../../images/header-background.jpg);
+  }
+}
+header:before,
+header:after {
+  content: " ";
+  display: table;
+}
+header:after {
+  clear: both;
+}
 header h1 {
   font-weight: 200;
   color: #ff7d00;
-  font-size: 2.5em;
+  font-size: 2em;
+}
+@media screen and (min-width: 600px) {
+  header h1 {
+    max-width: 30rem;
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 600px) {
+  header h1 {
+    max-width: 60rem;
+  }
 }
 header h3 {
   font-weight: 200;
   color: #a9a9a9;
   font-size: 1.2em;
 }
+@media screen and (min-width: 600px) {
+  header h3 {
+    margin: 2em 0 !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  header h3 {
+    margin: 3em 0 !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  header .btn--orange {
+    float: left;
+  }
+}
+header .bullet-breaker {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  header .bullet-breaker {
+    display: inline;
+  }
+  header .bullet-breaker::before {
+    content: "•";
+    margin: 0 .5em;
+  }
+}
 header .social {
   margin: 0 0 1.5rem 0;
+}
+@media screen and (min-width: 600px) {
+  header .social {
+    float: left;
+    margin-left: 3rem;
+  }
 }
 header .social .icon {
   display: inline-block;
@@ -135,6 +259,17 @@ section.about {
   background-image: url(../../images/about-background-sm.jpg);
   color: #ffffff;
   text-align: center;
+}
+@media screen and (min-width: 900px) {
+  section.about {
+    background-image: url(../../images/about-background.jpg);
+  }
+}
+@media screen and (min-width: 600px) {
+  section.about .content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 section.about .logo-icon {
   width: 50px;
@@ -165,17 +300,25 @@ section.about ul li {
   font-weight: 700;
   line-height: 2em;
 }
-section.about ul li:before {
+@media screen and (min-width: 600px) {
+  section.about ul li {
+    font-size: 0.7em;
+  }
+}
+section.about ul li:not(:first-child):before {
   content: "•";
   margin-right: 0.5em;
-}
-section.about ul li:first-child:before {
-  content: "";
-  margin-right: 0em;
 }
 section.about p {
   font-weight: 300;
   line-height: 1.3em;
+}
+@media screen and (min-width: 600px) {
+  section.about p {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 section.location {
   background: #ff7d00 50% no-repeat;
@@ -186,6 +329,20 @@ section.location {
   padding-bottom: 3rem;
   text-align: center;
   color: #ffffff;
+}
+@media screen and (min-width: 600px) {
+  section.location {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  section.location {
+    font-size: 24px;
+    background-image: url(../../images/location-background.jpg);
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
 }
 section.location h1 {
   font-family: "superclarendon";
@@ -233,11 +390,21 @@ section.reserve {
   background-image: url(../../images/reserve-background-sm.jpg);
   text-align: center;
 }
+@media screen and (min-width: 600px) {
+  section.reserve {
+    background-image: url(../../images/reserve-background.jpg);
+  }
+}
 section.reserve h2 {
   font-size: 2em;
   line-height: 1.4;
   color: #ffffff;
   font-weight: 200;
+}
+@media screen and (min-width: 900px) {
+  section.reserve h2 {
+    padding: 3rem ;
+  }
 }
 section.reserve h3 {
   font-family: "superclarendon";
@@ -253,11 +420,22 @@ section.founders {
   padding-bottom: 86px;
   background-size: cover;
 }
+@media screen and (min-width: 1200px) {
+  section.founders {
+    width: 50%;
+    flex: 1;
+  }
+}
 section.founders h2 {
   font-size: 2em;
   line-height: 1.4;
   color: #ffffff;
   font-weight: 200;
+}
+@media screen and (min-width: 900px) {
+  section.founders h2 {
+    padding: 3rem ;
+  }
 }
 section.founders h3 {
   font-family: "superclarendon";
@@ -269,27 +447,52 @@ section.founders h3 {
 section.map {
   background: url(../../images/map-background-sm.jpg) 50% no-repeat;
   text-align: center;
-  padding-top: 40px;
-  padding-bottom: 160px;
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+}
+@media screen and (min-width: 600px) {
+  section.map {
+    background: url(../../images/map-background.jpg) 50% 30% no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 600px) {
+  section.map {
+    padding-top: 3rem;
+    padding-bottom: 13rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.map {
+    width: 50%;
+    flex: 1;
+  }
 }
 section.map .map-box {
   background-color: rgba(255, 125, 0, 0.8);
-  width: 250px;
+  width: 20rem;
   margin: 0 auto;
   color: #ffffff;
   padding: 2em;
   position: relative;
 }
+@media screen and (min-width: 600px) {
+  section.map .map-box {
+    width: 30rem;
+  }
+}
 section.map .map-box::after {
   content: "";
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-top: 20px solid rgba(255, 125, 0, 0.8);
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+  border-top: 1rem solid rgba(255, 125, 0, 0.8);
   position: absolute;
-  bottom: -20px;
-  left: 140px;
+  bottom: -1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 section.map h1 {
   font-size: 1.3em;
