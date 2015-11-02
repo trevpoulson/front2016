@@ -8,12 +8,17 @@ body {
 }
 @media screen and (min-width: 600px) {
   body {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body {
     font-size: 20px;
   }
 }
 @media screen and (min-width: 1500px) {
   body {
-    font-size: 36px;
+    font-size: 22px;
   }
 }
 * {
@@ -56,10 +61,11 @@ body {
   padding: 1rem 2rem;
   margin: 0 0 1.5rem 0;
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+  font-size: 18px;
   background-color: #ff7d00;
 }
 .btn--orange:hover {
@@ -71,14 +77,14 @@ body {
   padding: 1rem 2rem;
   margin: 0 0 1.5rem 0;
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+  font-size: 18px;
   background-color: transparent;
   border: solid 2px #ff7d00;
   color: #ff7d00;
-  font-size: 1em;
   outline: none;
 }
 .btn--orange-outline:hover {
@@ -97,10 +103,11 @@ body {
   padding: 1rem 2rem;
   margin: 0 0 1.5rem 0;
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-decoration: none;
+  font-size: 18px;
   background-color: #1fbcff;
 }
 .btn--blue:hover {
@@ -201,6 +208,11 @@ header h1 {
     max-width: 60rem;
   }
 }
+@media screen and (min-width: 1200px) {
+  header h1 {
+    font-size: 3em;
+  }
+}
 header h3 {
   font-weight: 200;
   color: #a9a9a9;
@@ -257,7 +269,7 @@ section.about {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
   background-image: url(../../images/about-background-sm.jpg);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 @media screen and (min-width: 900px) {
@@ -265,10 +277,17 @@ section.about {
     background-image: url(../../images/about-background.jpg);
   }
 }
+section.about .content {
+  margin: 0 auto;
+}
 @media screen and (min-width: 600px) {
   section.about .content {
     max-width: 600px;
-    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 900px) {
+  section.about .content {
+    max-width: 900px;
   }
 }
 section.about .logo-icon {
@@ -294,16 +313,24 @@ section.about ul {
   padding: 0 0 1.5rem;
   border-bottom: solid 1px rgba(255, 255, 255, 0.6);
 }
+@media screen and (min-width: 900px) {
+  section.about ul {
+    padding: 0 2.5rem 3rem;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  section.about ul {
+    padding: 0 2rem 4rem;
+    margin-bottom: 4rem;
+  }
+}
 section.about ul li {
   display: inline;
   opacity: 0.6;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 2em;
-}
-@media screen and (min-width: 600px) {
-  section.about ul li {
-    font-size: 0.7em;
-  }
+  font-size: 1em;
 }
 section.about ul li:not(:first-child):before {
   content: "•";
@@ -320,6 +347,14 @@ section.about p {
     margin-right: auto;
   }
 }
+@media screen and (min-width: 900px) {
+  section.about p {
+    max-width: 650px;
+    font-weight: 200;
+    line-height: 1.5em;
+    margin: 2em auto;
+  }
+}
 section.location {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
@@ -328,7 +363,7 @@ section.location {
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
 }
 @media screen and (min-width: 600px) {
   section.location {
@@ -344,7 +379,19 @@ section.location {
     padding-bottom: 12rem;
   }
 }
-section.location h1 {
+@media screen and (min-width: 900px) {
+  section.location {
+    font-size: 30px;
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+  }
+}
+section.location .content > * {
+  text-align: justify;
+  max-width: 470px;
+  margin: 0 auto;
+}
+section.location .year {
   font-family: "superclarendon";
   font-weight: 900;
   color: #ff7d00;
@@ -352,20 +399,20 @@ section.location h1 {
   margin-bottom: 0.25rem;
   line-height: .7em;
 }
-section.location h2 {
+section.location .date {
   font-weight: 400;
   font-size: 4.25em;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
   line-height: .8em;
 }
-section.location h3 {
+section.location .tagline {
   font-weight: 200;
   font-size: 1.5em;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
 }
-section.location h4 {
+section.location .place {
   font-family: "superclarendon";
   font-weight: 700;
   font-style: italic;
@@ -390,6 +437,9 @@ section.reserve {
   background-image: url(../../images/reserve-background-sm.jpg);
   text-align: center;
 }
+section.reserve .content {
+  max-width: 1100px;
+}
 @media screen and (min-width: 600px) {
   section.reserve {
     background-image: url(../../images/reserve-background.jpg);
@@ -398,7 +448,7 @@ section.reserve {
 section.reserve h2 {
   font-size: 2em;
   line-height: 1.4;
-  color: #ffffff;
+  color: #fff;
   font-weight: 200;
 }
 @media screen and (min-width: 900px) {
@@ -410,8 +460,9 @@ section.reserve h3 {
   font-family: "superclarendon";
   font-style: italic;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   line-height: 1.4;
+  margin-bottom: 3em;
 }
 section.founders {
   background: url(../../images/founders-background-sm.jpg) 50% no-repeat;
@@ -429,7 +480,7 @@ section.founders {
 section.founders h2 {
   font-size: 2em;
   line-height: 1.4;
-  color: #ffffff;
+  color: #fff;
   font-weight: 200;
 }
 @media screen and (min-width: 900px) {
@@ -441,7 +492,7 @@ section.founders h3 {
   font-family: "superclarendon";
   font-style: italic;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   line-height: 1.4;
 }
 section.map {
@@ -472,7 +523,7 @@ section.map .map-box {
   background-color: rgba(255, 125, 0, 0.8);
   width: 20rem;
   margin: 0 auto;
-  color: #ffffff;
+  color: #fff;
   padding: 2em;
   position: relative;
 }
@@ -546,14 +597,67 @@ section.schedule .time-primary {
   font-size: 1.3em;
 }
 section.schedule .time-primary .time {
-  color: #333333;
+  color: #333;
   margin-bottom: .3rem;
   font-weight: 400;
 }
 section.schedule .time-primary .event {
   margin-bottom: 1rem;
-  color: #333333;
+  color: #333;
   font-weight: 400;
+}
+@media screen and (min-width: 900px) {
+  section.schedule div:before,
+  section.schedule div:after {
+    content: " ";
+    display: table;
+  }
+  section.schedule div:after {
+    clear: both;
+  }
+  section.schedule .time-primary,
+  section.schedule .time-secondary {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+  }
+  section.schedule p {
+    display: inline-block;
+  }
+  section.schedule .time.time {
+    width: 50%;
+    float: left;
+    text-align: right;
+    font-size: 0.7em;
+    padding: 0 24px;
+    margin: 0;
+    line-height: 100px;
+    margin-right: -0.5em;
+    border-right: solid 2px #a9a9a9;
+  }
+  section.schedule .event.event {
+    width: 50%;
+    float: right;
+    text-align: left;
+    padding: 0 24px;
+    margin: 0;
+    line-height: 100px;
+    position: relative;
+  }
+  section.schedule .event.event:before {
+    content: "";
+    height: .666em;
+    width: .666em;
+    border-radius: 1em;
+    background-color: #a9a9a9;
+    display: block;
+    position: absolute;
+    left: -0.366em;
+    top: 40%;
+  }
+  section.schedule .time-primary .event:before {
+    background-color: #ff7d00;
+  }
 }
 footer {
   text-align: center;

@@ -44,6 +44,15 @@
   }
 }
 
+.full-justify() {
+    text-align:justify;
+	// &::after {
+	//     content: "";
+	//     display: inline-block;
+	//     width: 100%;    
+ //    }
+}
+
 
 /****************************** Overall ******************************/
 
@@ -52,10 +61,13 @@ body {
 	font-size: 16px;
 	box-sizing: border-box;
 	@media screen and (min-width: @screen-sm) {
+		font-size: 18px;
+	}
+	@media screen and (min-width: @screen-lg) {
 		font-size: 20px;
 	}
 	@media screen and (min-width: @screen-xl) {
-		font-size: 36px;
+		font-size: 22px;
 	}
 }
 
@@ -100,6 +112,7 @@ body {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-decoration: none;
+	font-size: 18px;
 
 }
 
@@ -116,7 +129,7 @@ body {
 	background-color: transparent;
 	border: solid 2px @color-orange;
 	color: @color-orange;
-	font-size: 1em;
+
 	outline: none;
 	&:hover {
 		background-color: fade(@color-orange, 20%);
@@ -200,6 +213,9 @@ header {
 		@media screen and (min-width: @screen-sm) {
 			max-width: 60rem;
 		}
+		@media screen and (min-width: @screen-lg) {
+			font-size: 3em;
+		}
 		
 	}
 	h3 {
@@ -257,9 +273,12 @@ section.about {
 	color: @color-white;
 	text-align: center;
 	.content {
+		margin: 0 auto;
 		@media screen and (min-width: @screen-sm) {
-			max-width: @screen-sm;		
-			margin: 0 auto;
+			max-width: @screen-sm;			
+		}
+		@media screen and (min-width: @screen-md) {
+			max-width: @screen-md;			
 		}
 	}
 	.logo-icon {
@@ -284,14 +303,21 @@ section.about {
 	ul {
 		padding: 0 0 1.5rem;
 		border-bottom: solid 1px fade(@color-white, 60%);
+		@media screen and (min-width: @screen-md) {
+			padding: 0 2.5rem 3rem;
+			margin-bottom: 3rem;
+		}
+		@media screen and (min-width: @screen-md) {
+			padding: 0 2rem 4rem;
+			margin-bottom: 4rem;
+		}
 		li {
 			display: inline;
 			opacity: 0.6;
-			font-weight: 700;
+			font-weight: 500;
 			line-height: 2em;
-			@media screen and (min-width: @screen-sm) {
-				font-size: 0.7em;
-			}
+			font-size: 1em;
+
 		
 			&:not(:first-child):before { 
 				content: "•";
@@ -306,6 +332,12 @@ section.about {
 			max-width: @screen-sm * 0.8;
 			margin-left: auto;
 			margin-right: auto;
+		}
+		@media screen and (min-width: @screen-md) {
+			max-width: 650px;
+			font-weight: 200;
+			line-height: 1.5em;
+			margin: 2em auto;
 		}
 	}
 }
@@ -323,13 +355,23 @@ section.location {
 		padding-top: 12rem;
 		padding-bottom: 12rem; 
 	}
+	@media screen and (min-width: @screen-md) {
+		font-size: 30px;
+		padding-top: 18rem;
+		padding-bottom: 18rem; 
+	}
 	
 	background-attachment: initial;
 	padding-top: 3rem;
 	padding-bottom: 3rem;
 	text-align: center;
 	color: @color-white;
-	h1{
+	.content > * {
+		.full-justify();
+		max-width: 470px;
+		margin: 0 auto;
+	}
+	.year{
 		font-family: @font-serif;
 		font-weight: 900;
 		color: @color-orange;
@@ -337,20 +379,20 @@ section.location {
 		margin-bottom: 0.25rem;
 		line-height: .7em;
 	}
-	h2{
+	.date{
 		font-weight: 400;
 		font-size: 4.25em;
 		text-transform: uppercase;
 		margin-bottom: 0.25rem;
 		line-height: .8em;
 	}
-	h3{
+	.tagline{
 		font-weight: 200;
 		font-size: 1.5em;
 		text-transform: uppercase;
 		margin-bottom: 0.25rem;
 	}
-	h4{
+	.place{
 		font-family: @font-serif;
 		font-weight: 700;
 		font-style: italic;
@@ -376,6 +418,9 @@ section.highlights {
 
 section.reserve {
 	.image-bg();
+	.content {
+		max-width: 1100px;
+	}
 	background-image: url(../../images/reserve-background-sm.jpg);
 	@media screen and (min-width: @screen-sm) {
 		background-image: url(../../images/reserve-background.jpg);
@@ -396,6 +441,7 @@ section.reserve {
 		font-weight: 700;
 		color: @color-white;
 		line-height: 1.4;
+		margin-bottom: 3em;
 	}
 
 }
@@ -539,6 +585,56 @@ section.schedule {
 			font-weight: 400;
 		}
 	}
+	@media screen and (min-width: @screen-md) {
+		div {
+			.clearfix();
+		}
+		.time-primary, .time-secondary {
+			font-size: 1.2em;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			display: inline-block;
+		}
+		.time.time {
+			width: 50%;
+			float: left;
+			text-align: right;
+			font-size: 0.7em;
+			padding: 0 24px;
+			margin: 0;
+			line-height: 100px;
+			margin-right: -.5em;
+			border-right: solid 2px @color-gray-medium;
+
+		}
+
+		.event.event {
+			width: 50%;
+			float: right;
+			text-align: left;
+			padding: 0 24px;
+			margin: 0;
+			line-height: 100px;
+			position: relative;
+			&:before {
+				content: "";
+				height: .666em;
+				width: .666em;
+				border-radius: 1em;
+				background-color: @color-gray-medium;
+				display: block;
+				position: absolute;;
+				left: -.366em;
+				top: 40%;
+
+			}
+		}
+		.time-primary .event:before {
+			background-color: @color-orange;
+		}
+	} 
 }
 
 footer {
