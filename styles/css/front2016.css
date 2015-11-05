@@ -465,6 +465,12 @@ section.reserve h3 {
   line-height: 1.4;
   margin-bottom: 3em;
 }
+section.reserve .reserve-tickets {
+  background: white;
+  padding: 24px 24px 0;
+  max-width: 470px;
+  margin: 0 auto;
+}
 section.founders {
   background: url(../../images/founders-background-sm.jpg) 50% no-repeat;
   text-align: center;
