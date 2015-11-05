@@ -217,6 +217,7 @@ header h3 {
   font-weight: 200;
   color: #a9a9a9;
   font-size: 1.2em;
+  text-transform: uppercase;
 }
 @media screen and (min-width: 600px) {
   header h3 {
@@ -394,7 +395,7 @@ section.location .content > * {
 section.location .year {
   font-family: "superclarendon";
   font-weight: 900;
-  color: #ff7d00;
+  color: rgba(255, 125, 0, 0.8);
   font-size: 7em;
   margin-bottom: 0.25rem;
   line-height: .7em;
@@ -688,4 +689,16 @@ footer .build-by {
   font-size: 0.8em;
   font-weight: 600;
   margin-top: 4rem;
+}
+footer .dash-breaker {
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  footer .dash-breaker {
+    display: inline;
+  }
+  footer .dash-breaker::before {
+    content: "/";
+    margin: 0em;
+  }
 }

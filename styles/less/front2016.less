@@ -222,6 +222,7 @@ header {
 		font-weight: 200;
 		color: @color-gray-medium;
 		font-size: 1.2em;
+		text-transform: uppercase;;
 		@media screen and (min-width: @screen-sm) {
 			margin: 2em 0 !important; 
 		}
@@ -374,7 +375,7 @@ section.location {
 	.year{
 		font-family: @font-serif;
 		font-weight: 900;
-		color: @color-orange;
+		color: fade(@color-orange, 80%);
 		font-size: 7em;
 		margin-bottom: 0.25rem;
 		line-height: .7em;
@@ -665,6 +666,16 @@ footer {
 		font-size: 0.8em;
 		font-weight: 600;
 		margin-top: 4rem;
+	}
+	.dash-breaker {
+		display: block;
+		@media screen and (min-width: @screen-sm) {
+			display: inline;
+			&::before {
+				content: "/";
+				margin: 0em;
+			}
+		}
 	}
 }
 
