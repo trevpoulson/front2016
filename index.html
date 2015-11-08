@@ -14,12 +14,21 @@
 			<nav>
 				<div class="content">
 					<img src="images/logo-gray.svg" alt="Gray Front Logo">
+					<ul class="navigation">
+							<li><a href="#about">CONFERENCE</a></li>
+							<li><a href="#schedule">SPEAKERS</a></li>
+							<li><a href="#location">VENUE</a></li>
+							<li><a href="#about">ABOUT</a></li>
+							<li><a href="#">SPONSORS</a></li>
+							<li><a href="#reserve">TICKETS</a></li>
+					</ul>
+					<button class="toggleNav"></button>
 				</div>
 			</nav>
 			<div class="content">
 				<h1>A two-day in-depth conference for user experience designers and product managers</h1>
 				<h3>12-13&nbsp;May&nbsp;2016 <span class="bullet-breaker"></span> Salt&nbsp;Lake&nbsp;City,&nbsp;Utah</h3>
-				<a href="#" class="btn--orange">Register now</a>
+				<a href="#reserve" class="btn--orange">Register now</a>
 				<div class="social">
 					<a href="#" class="icon"><img src="images/icon-linkedin.svg" alt="Linked-in Icon"></a>
 					<a href="#" class="icon"><img src="images/icon-twitter.svg" alt="Twitter Icon"></a>
@@ -27,7 +36,7 @@
 			</div>
 		</header>
 		<main>
-			<section class="about">
+			<section class="about" id="about">
 				<div class="content">
 					<img src="images/icon-white.svg" alt="Front Icon" class="logo-icon">
 					<h2>The product design conference</h2>
@@ -48,23 +57,23 @@
 					<p>You want to hear from your peers. You want to be inspired. You want to learn what techniques are working and which are not. You aren’t just looking for a motivational speaker; you’re looking for real world, in-the-trenches case studies of things that teach how you can actually have a big effect at your company and in the world.</p>
 				</div>
 			</section>
-			<section class="location">
+			<section class="location" id="location">
 				<div class="content">
-					<span class="tagline">HISTORIC SALT LAKE CITY</span><br>
-					<span class="place">Union Pacific Railroad Depot</span><br>
-					<span class="date">12-13 MAY</span><br>
+					<span class="tagline">HISTORIC SALT LAKE CITY</span>
+					<span class="place">Union Pacific Railroad Depot</span>
+					<span class="date">12-13 MAY</span>
 					<span class="year">2016</span>
 				</div>
 			</section>
-			<section class="highlights">
+			<section class="highlights" id="highlights">
 				<div class="content">
 					<h1>2015 highlights</h1>
-					<video  poster="images/video-poster.jpg">
-						<source src="#" type="video/mp4">
-					</video>
+					<div class="video">
+						<iframe src="https://player.vimeo.com/video/140530649?color=ffffff&title=0&byline=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
 				</div>
 			</section>
-			<section class="reserve">
+			<section class="reserve" id="reserve">
 				<div class="content">
 					<h2>350 software user experience designers and product  managers gathered in Salt Lake in 2015 to share, learn, and inspired each to create amazing products. </h2>
 					<h3>It’s happening again in May 2016. Join us at the Front.</h3>
@@ -72,20 +81,20 @@
 				</div>
 			</section>
 			<div class="row">
-				<section class="founders">
+				<section class="founders" id="founders">
 					<div class="content">
 						<h2>Brought to you by<br>Andrew Branch,<br> Ben Peck,<br> and Wade Shearer</h2>
 						<h3>Founders of the Product Design Association</h3>
 					</div>
 				</section>
-				<section class="map">
+				<section class="map" id="map">
 					<div class="map-box">
 						<h1>The Historic Union Pacific Railroad Depot</h1>
 						<p>400 S. Temple, Salt Lake City, Utah</p>
 					</div>
 				</section>
 			</div>
-			<section class="features">
+			<section class="features" id="features">
 				<div class="content">
 					<h3><span class="number">2</span> days</h3>
 					<h3><span class="number">12</span> Speakers</h3>
@@ -93,29 +102,109 @@
 					<h3><span class="number">1</span> incredible event</h3>
 				</div>
 			</section>
-			<section class="schedule">
+			<section class="schedule" id="schedule">
 				<div class="content">
 					<h1>Schedule</h1>
 					<button class="btn--orange-outline">Thursday <span class="day">12 May 2016</span></button>
 					<button class="btn--orange-outline off-state">Friday <span class="day">13 May 2016</span></button>
 					<div class="schedule-thursday schedule-day ">
 						<div class="time-secondary">
-							<p class="time">Thursday 8:00 AM</p>
-							<p class="event">Registration &amp; breakfast</p>
-						</div>
-						<div class="time-primary">
 							<p class="time">8:00 AM</p>
 							<p class="event">Registration &amp; breakfast</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">9:00 AM</p>
+							<p class="event">Opening Remarks</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">9:10 AM</p>
+							<p class="event">Talk • Cap Watkins</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">9:50 AM</p>
+							<p class="event">Talk • Shaun Moon</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">10:30 AM</p>
+							<p class="event">Break</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">11:10 AM</p>
+							<p class="event">Talk • Tracy Varnell</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">11:50 AM</p>
+							<p class="event">Talk • Stephen Walger</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">12:30 PM</p>
+							<p class="event">Lunch</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">2:10 PM</p>
+							<p class="event">Panel • Full Story team</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">2:50 PM</p>
+							<p class="event">Talk • David Oldham</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">3:30 PM</p>
+							<p class="event">Talk • Keenan Cummings</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">4:10 PM</p>
+							<p class="event">Kick-off Mixer</p>
 						</div>
 					</div>
 					<div class="schedule-friday  schedule-day hidden">
 						<div class="time-secondary">
-							<p class="time">Friday 8:00 AM</p>
-							<p class="event">Registration &amp; breakfast</p>
+							<p class="time">8:00 AM</p>
+							<p class="event">Breakfast</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">9:00 AM</p>
+							<p class="event">Kick-off day 2</p>
 						</div>
 						<div class="time-primary">
-							<p class="time">8:00 AM</p>
-							<p class="event">Registration &amp; breakfast</p>
+							<p class="time">9:10 AM</p>
+							<p class="event">Talk • Kyle Jacobson</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">9:50 AM</p>
+							<p class="event">Talk • Sian Townsend</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">10:30 AM</p>
+							<p class="event">Break</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">11:10 AM</p>
+							<p class="event">Talk • Chros Willis</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">11:50 AM</p>
+							<p class="event">Talk • Garth Braithwaite</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">12:30 PM</p>
+							<p class="event">Lunch</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">2:10 PM</p>
+							<p class="event">Panel • Pluralsight team</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">2:50 PM</p>
+							<p class="event">Talk • (woman)</p>
+						</div>
+						<div class="time-primary">
+							<p class="time">3:30 PM</p>
+							<p class="event">Talk • Bob Baxley</p>
+						</div>
+						<div class="time-secondary">
+							<p class="time">4:10 PM</p>
+							<p class="event">Awards &amp; Closing Announcements</p>
 						</div>
 					</div>
 				</div>
@@ -134,6 +223,18 @@
 		<script src="scripts/front2016.js"></script>
 		<script src="https://use.typekit.net/ekw2vnc.js"></script>
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		<script>
+			$(function(){
+				$('.toggleNav').click(function(event) {
+					$('body').toggleClass('open');
+				});
+
+				$('.navigation').click(function(event) {
+					$('body').removeClass('open');
+				}); 
+
+			});
+		</script>
 
 	</body>
 </html>
