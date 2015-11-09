@@ -705,8 +705,8 @@ section.schedule button:not(:last-child) {
   margin-right: 0.5rem;
 }
 section.schedule .time-secondary {
-  padding: 24px 0;
-  font-size: 1.2em;
+  padding: 1rem 0 0;
+  font-size: 1em;
 }
 section.schedule .time-secondary .time {
   color: #a9a9a9;
@@ -718,7 +718,8 @@ section.schedule .time-secondary .event {
   font-weight: 200;
 }
 section.schedule .time-primary {
-  font-size: 1.3em;
+  font-size: 1em;
+  padding: 1rem 0 0;
 }
 section.schedule .time-primary .time {
   color: #333;
