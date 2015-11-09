@@ -22,8 +22,6 @@ body {
   }
 }
 * {
-  -webkit-transition: 0.3s cubic-bezier(0.76, 0.01, 0.3, 1);
-  transition: 0.3s cubic-bezier(0.76, 0.01, 0.3, 1);
   box-sizing: inherit;
 }
 @media screen and (min-width: 1200px) {
@@ -34,6 +32,7 @@ body {
 }
 .content {
   margin: 0 auto;
+  position: relative;
 }
 @media screen and (min-width: 600px) {
   .content {
@@ -167,6 +166,7 @@ nav img {
   nav img {
     width: 20rem;
     margin-bottom: 1rem;
+    margin-top: 3em;
   }
 }
 @media screen and (min-width: 600px) {
@@ -197,7 +197,7 @@ nav ul {
     max-height: 600px;
     background: transparent;
     position: absolute;
-    top: 0;
+    top: -75px;
     right: 0;
     text-align: right;
   }
@@ -232,6 +232,7 @@ nav button {
   position: fixed;
   top: 12px;
   right: 12px;
+  z-index: 4;
   font-size: 14px;
   padding: .5em 1em;
   border-width: 0px;
@@ -311,15 +312,16 @@ header h1 {
 header h3 {
   font-weight: 200;
   color: #a9a9a9;
-  font-size: 1.2em;
+  font-size: 14px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 600px) {
   header h3 {
     margin: 2em 0 !important;
+    font-size: 18px;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   header h3 {
     margin: 3em 0 !important;
   }
@@ -505,7 +507,7 @@ section.location .date {
 }
 section.location .tagline {
   font-weight: 200;
-  font-size: 1.5em;
+  font-size: 1.55em;
   text-transform: uppercase;
   margin-bottom: 0.35rem;
 }
@@ -514,7 +516,7 @@ section.location .place {
   font-weight: 700;
   font-style: italic;
   color: #0093d2;
-  font-size: 1.1em;
+  font-size: 1.04em;
   margin-bottom: 0.55rem;
 }
 section.highlights {
@@ -696,6 +698,9 @@ section.schedule .day {
   font-size: .6em;
   display: block;
 }
+section.schedule button {
+  text-transform: capitalize;
+}
 section.schedule button:not(:last-child) {
   margin-right: 0.5rem;
 }
@@ -736,7 +741,7 @@ section.schedule .time-primary .event {
   }
   section.schedule .time-primary,
   section.schedule .time-secondary {
-    font-size: 1.2em;
+    font-size: 0.8em;
     margin: 0;
     padding: 0;
   }
@@ -750,7 +755,7 @@ section.schedule .time-primary .event {
     font-size: 0.7em;
     padding: 0 24px;
     margin: 0;
-    line-height: 100px;
+    line-height: 3rem;
     margin-right: -0.5em;
     border-right: solid 2px #a9a9a9;
   }
@@ -760,7 +765,7 @@ section.schedule .time-primary .event {
     text-align: left;
     padding: 0 24px;
     margin: 0;
-    line-height: 100px;
+    line-height: 3rem;
     position: relative;
   }
   section.schedule .event.event:before {
@@ -774,6 +779,17 @@ section.schedule .time-primary .event {
     left: -0.366em;
     top: 40%;
   }
+  section.schedule .schedule-day > *:last-child .time.time {
+    line-height: 1.5rem;
+    padding-top: 1.5rem;
+    line-height: 0;
+  }
+  section.schedule .schedule-day > *:first-child .time.time {
+    line-height: 1.5rem;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    line-height: 0;
+  }
   section.schedule .time-primary .event:before {
     background-color: #ff7d00;
   }
@@ -783,18 +799,19 @@ footer {
 }
 footer h2 {
   font-family: "superclarendon";
-  font-size: 1em;
+  font-size: 12px;
   color: #a9a9a9;
   font-weight: 200;
   font-style: italic;
 }
 footer img {
-  max-width: 240px;
+  max-width: 160px;
   margin-bottom: 48px;
 }
 footer p {
   color: #a9a9a9;
   margin-bottom: .5em;
+  font-size: 16px;
 }
 footer a {
   text-decoration: none;
@@ -802,11 +819,6 @@ footer a {
 }
 footer a:hover {
   border-bottom: solid 1px #a9a9a9;
-}
-footer .build-by {
-  font-size: 0.8em;
-  font-weight: 600;
-  margin-top: 4rem;
 }
 footer .dash-breaker {
   display: block;

@@ -72,8 +72,8 @@ body {
 }
 
 * {
-	-webkit-transition: 0.3s @easing;
-	transition: 0.3s @easing;
+	// -webkit-transition: 0.3s @easing;
+	// transition: 0.3s @easing;
 	box-sizing: inherit;
 }
 
@@ -87,6 +87,7 @@ body {
 
 .content {
 	margin: 0 auto;
+	position: relative;
 	@media screen and (min-width: @screen-sm) {
 		max-width: @screen-sm;
 	}
@@ -188,6 +189,7 @@ nav {
 		@media screen and (min-width: @screen-sm) {
 			width: 20rem;
 			margin-bottom: 1rem;
+			margin-top: 3em;
 		}
 		@media screen and (min-width: @screen-sm) {
 			margin-bottom: 1rem;
@@ -214,7 +216,7 @@ nav {
 			max-height: 600px;
 			background: transparent;
 			position: absolute;
-			top: 0;
+			top: -75px;
 			right:0;
 			text-align: right;
 		}
@@ -249,6 +251,7 @@ nav {
 		position: fixed;
 		top: 12px;
 		right: 12px;
+		z-index: 4;
 		font-size: 14px;
 		padding: .5em 1em;
 		border-width: 0px;
@@ -312,12 +315,13 @@ header {
 	h3 {
 		font-weight: 200;
 		color: @color-gray-medium;
-		font-size: 1.2em;
+		font-size: 14px;
 		text-transform: uppercase;;
 		@media screen and (min-width: @screen-sm) {
 			margin: 2em 0 !important; 
+			font-size: 18px;
 		}
-		@media screen and (min-width: @screen-sm) {
+		@media screen and (min-width: @screen-md) {
 			margin: 3em 0 !important; 
 		}
 	}
@@ -481,7 +485,7 @@ section.location {
 	}
 	.tagline{
 		font-weight: 200;
-		font-size: 1.5em;
+		font-size: 1.55em;
 		text-transform: uppercase;
 		margin-bottom: 0.35rem;
 	}
@@ -490,7 +494,7 @@ section.location {
 		font-weight: 700;
 		font-style: italic;
 		color: @color-blue-dark;
-		font-size: 1.1em;
+		font-size: 1.04em;
 		margin-bottom: 0.55rem;
 	}
 }
@@ -670,6 +674,9 @@ section.schedule {
 		font-size: .6em;
 		display: block;
 	}
+	button {
+		text-transform: capitalize;
+	}
 	button:not(:last-child) {
 		margin-right: 0.5rem;
 	}
@@ -706,7 +713,7 @@ section.schedule {
 			.clearfix();
 		}
 		.time-primary, .time-secondary {
-			font-size: 1.2em;
+			font-size: 0.8em;
 			margin: 0;
 			padding: 0;
 		}
@@ -720,7 +727,7 @@ section.schedule {
 			font-size: 0.7em;
 			padding: 0 24px;
 			margin: 0;
-			line-height: 100px;
+			line-height: 3rem;
 			margin-right: -.5em;
 			border-right: solid 2px @color-gray-medium;
 
@@ -732,7 +739,7 @@ section.schedule {
 			text-align: left;
 			padding: 0 24px;
 			margin: 0;
-			line-height: 100px;
+			line-height: 3rem;
 			position: relative;
 			&:before {
 				content: "";
@@ -747,6 +754,17 @@ section.schedule {
 
 			}
 		}
+		.schedule-day > *:last-child .time.time {
+				line-height: 1.5rem;
+				padding-top: 1.5rem;
+				line-height: 0;
+		}
+		.schedule-day > *:first-child .time.time {
+				line-height: 1.5rem;
+				margin-top: 1.5rem;
+				padding-bottom: 1.5rem;
+				line-height: 0;
+		}
 		.time-primary .event:before {
 			background-color: @color-orange;
 		}
@@ -757,18 +775,19 @@ footer {
 	text-align: center;
 	h2 {
 		font-family: @font-serif;
-		font-size: 1em;
+		font-size: 12px;
 		color:@color-gray-medium;
 		font-weight: 200;
 		font-style: italic;
 	}
 	img {
-		max-width: 240px;
+		max-width: 160px;
 		margin-bottom: 48px;
 	}
 	p {
 		color: @color-gray-medium;
 		margin-bottom: .5em;
+		font-size: 16px;
 	}
 	a {
 		text-decoration: none;
@@ -777,11 +796,7 @@ footer {
 			border-bottom: solid 1px @color-gray-medium;
 		}
 	}
-	.build-by {
-		font-size: 0.8em;
-		font-weight: 600;
-		margin-top: 4rem;
-	}
+	
 	.dash-breaker {
 		display: block;
 		@media screen and (min-width: @screen-sm) {
