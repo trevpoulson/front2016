@@ -9,6 +9,11 @@
 @color-gray-medium: 	#a9a9a9;
 @color-gray-light: 		#f7f7f7;
 
+@color-pumpkin: 		#ff7d00;
+@color-blueberry: 		#653789;
+@color-sky: 			#1fbcff;
+@color-evening: 		#006f9e;
+@color-warm-gray: 		#7f7f7f;
 
 @element-margin: 		0 0 1.5rem 0;
 
@@ -174,7 +179,7 @@ header, section, footer {
 		padding: 3rem ;
 	}
 	@media screen and (min-width: @screen-md) {
-		padding: 6rem 3rem ;
+		padding: 9rem 3rem ;
 	}
 
 	
@@ -360,12 +365,95 @@ header {
 		}
 	}
 }
+
+section.speakers {
+	padding: 0;
+	.clearfix();
+	.speaker {
+		position: relative;
+		float: left;
+		width: 100%;
+		@media screen and (min-width: @screen-sm) {
+			width: 50%;
+		}
+		@media screen and (min-width: @screen-md) {
+			width: 25%;
+		}
+		@media screen and (min-width: @screen-xl) {
+			width: 20%;
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.speaker-info {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			@media screen and (min-width: @screen-md) {
+				max-height: 0;
+				overflow: hidden;
+				transition: 0.3s ease;
+				&.open {
+					max-height: 100px;
+				}
+			}
+			
+			background-size: 100% 100%;
+			&.primary {
+				// background-color: fade(@color-orange, 80%);
+				// background-image: url(../../images/namebackground-orange.svg);
+				h3 {
+					background: @color-orange;
+				}
+				h4 {
+					background-color: fade(@color-orange, 70%);
+				}
+			}
+			&.secondary {
+				// background-color: fade(@color-orange, 80%);
+				// background-image: url(../../images/namebackground-orange.svg);
+				h3 {
+					background: @color-evening;
+				}
+				h4 {
+					background-color: fade(@color-evening, 70%);
+				}
+			}
+			&.tertiary {
+				// background-color: fade(@color-orange, 80%);
+				// background-image: url(../../images/namebackground-orange.svg);
+				h3 {
+					background: @color-blueberry;
+				}
+				h4 {
+					background-color: fade(@color-blueberry, 70%);
+				}
+			}
+		}
+		h3{
+			font-size: 20px;
+			font-weight: 500;
+			color: @color-white;
+			margin: 0;
+			padding: 5px 20px;
+		}
+		h4{
+			font-size: 14px;
+			color: @color-white;
+			font-weight: 300;
+			margin: 0;
+			padding: 5px 20px;
+			height: 50px;
+		}
+	}
+}
+
 section.about {
 	.image-bg();
-	background-image: url(../../images/about-background-sm.jpg);
-	@media screen and (min-width: @screen-md) {
-		background-image: url(../../images/about-background.jpg);
-	}
+	background-image: url(../../images/bg-about.jpg);
+	
 	color: @color-white;
 	text-align: center;
 	.content {
@@ -502,6 +590,13 @@ section.location {
 
 section.highlights {
 	text-align: center;
+	background-image: url(../../images/bg-highlights.jpg);
+	img {
+		max-width: 350px;
+		display: block;
+		margin: 0 auto 80px;
+	}
+
 	h1 {
 		font-size: 2em;
 		color: @color-orange;
@@ -530,15 +625,12 @@ section.highlights {
 	}
 }
 
-section.reserve {
+section.tickets {
 	.image-bg();
 	.content {
 		max-width: 1100px;
 	}
-	background-image: url(../../images/reserve-background-sm.jpg);
-	@media screen and (min-width: @screen-sm) {
-		background-image: url(../../images/reserve-background.jpg);
-	}
+	background-image: url(../../images/bg-tickets.jpg);
 	text-align: center;
 	h2{
 		font-size: 2em;
@@ -546,7 +638,7 @@ section.reserve {
 		color: @color-white;
 		font-weight: 200;
 		@media screen and (min-width: @screen-md) {
-			padding: 3rem ;
+			padding: 0 3rem 3rem ;
 		}
 	}
 	h3{
@@ -772,6 +864,39 @@ section.schedule {
 	} 
 }
 
+section.sponsors {
+	text-align: center;
+	.content {
+		max-width: 1200px;
+	}
+	h1 {
+		font-size: 2em;
+		color: @color-orange;
+		font-weight: 200;
+	}
+	a {
+		margin: 30px 40px;
+		display: inline-block;
+	}
+	.pluralsight-logo {
+		width: 200px;
+	}
+	h2{
+		font-family: @font-serif;
+		font-weight: 600;
+		color:@color-warm-gray;
+		font-style: italic;
+		font-size: 1em;
+		margin-top: 150px;
+	}
+	p {
+		font-size: .8em;
+		color:@color-warm-gray;
+
+	}
+
+}
+
 footer {
 	text-align: center;
 	h2 {
@@ -809,20 +934,6 @@ footer {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-// section.about {
-// 	transform: skewY(-20deg);
-// 	.content {
-// 		transform: skewY(20deg);
-// 	}
-// }
 
 
 

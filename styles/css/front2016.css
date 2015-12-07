@@ -153,7 +153,7 @@ footer {
   header,
   section,
   footer {
-    padding: 6rem 3rem ;
+    padding: 9rem 3rem ;
   }
 }
 nav {
@@ -363,17 +363,97 @@ header .social .icon img {
 header .social .icon img:hover {
   opacity: 1;
 }
+section.speakers {
+  padding: 0;
+}
+section.speakers:before,
+section.speakers:after {
+  content: " ";
+  display: table;
+}
+section.speakers:after {
+  clear: both;
+}
+section.speakers .speaker {
+  position: relative;
+  float: left;
+  width: 100%;
+}
+@media screen and (min-width: 600px) {
+  section.speakers .speaker {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  section.speakers .speaker {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  section.speakers .speaker {
+    width: 20%;
+  }
+}
+section.speakers .speaker img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+section.speakers .speaker .speaker-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-size: 100% 100%;
+}
+@media screen and (min-width: 900px) {
+  section.speakers .speaker .speaker-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+  }
+  section.speakers .speaker .speaker-info.open {
+    max-height: 100px;
+  }
+}
+section.speakers .speaker .speaker-info.primary h3 {
+  background: #ff7d00;
+}
+section.speakers .speaker .speaker-info.primary h4 {
+  background-color: rgba(255, 125, 0, 0.7);
+}
+section.speakers .speaker .speaker-info.secondary h3 {
+  background: #006f9e;
+}
+section.speakers .speaker .speaker-info.secondary h4 {
+  background-color: rgba(0, 111, 158, 0.7);
+}
+section.speakers .speaker .speaker-info.tertiary h3 {
+  background: #653789;
+}
+section.speakers .speaker .speaker-info.tertiary h4 {
+  background-color: rgba(101, 55, 137, 0.7);
+}
+section.speakers .speaker h3 {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  padding: 5px 20px;
+}
+section.speakers .speaker h4 {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+  padding: 5px 20px;
+  height: 50px;
+}
 section.about {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
-  background-image: url(../../images/about-background-sm.jpg);
+  background-image: url(../../images/bg-about.jpg);
   color: #fff;
   text-align: center;
-}
-@media screen and (min-width: 900px) {
-  section.about {
-    background-image: url(../../images/about-background.jpg);
-  }
 }
 section.about .content {
   margin: 0 auto;
@@ -521,6 +601,12 @@ section.location .place {
 }
 section.highlights {
   text-align: center;
+  background-image: url(../../images/bg-highlights.jpg);
+}
+section.highlights img {
+  max-width: 350px;
+  display: block;
+  margin: 0 auto 80px;
 }
 section.highlights h1 {
   font-size: 2em;
@@ -546,32 +632,27 @@ section.highlights iframe {
   height: 100%;
   border: 0;
 }
-section.reserve {
+section.tickets {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
-  background-image: url(../../images/reserve-background-sm.jpg);
+  background-image: url(../../images/bg-tickets.jpg);
   text-align: center;
 }
-section.reserve .content {
+section.tickets .content {
   max-width: 1100px;
 }
-@media screen and (min-width: 600px) {
-  section.reserve {
-    background-image: url(../../images/reserve-background.jpg);
-  }
-}
-section.reserve h2 {
+section.tickets h2 {
   font-size: 2em;
   line-height: 1.4;
   color: #fff;
   font-weight: 200;
 }
 @media screen and (min-width: 900px) {
-  section.reserve h2 {
-    padding: 3rem ;
+  section.tickets h2 {
+    padding: 0 3rem 3rem ;
   }
 }
-section.reserve h3 {
+section.tickets h3 {
   font-family: "superclarendon";
   font-style: italic;
   font-weight: 700;
@@ -579,7 +660,7 @@ section.reserve h3 {
   line-height: 1.4;
   margin-bottom: 3em;
 }
-section.reserve .reserve-tickets {
+section.tickets .reserve-tickets {
   background: white;
   padding: 24px 24px 0;
   max-width: 470px;
@@ -794,6 +875,36 @@ section.schedule .time-primary .event {
   section.schedule .time-primary .event:before {
     background-color: #ff7d00;
   }
+}
+section.sponsors {
+  text-align: center;
+}
+section.sponsors .content {
+  max-width: 1200px;
+}
+section.sponsors h1 {
+  font-size: 2em;
+  color: #ff7d00;
+  font-weight: 200;
+}
+section.sponsors a {
+  margin: 30px 40px;
+  display: inline-block;
+}
+section.sponsors .pluralsight-logo {
+  width: 200px;
+}
+section.sponsors h2 {
+  font-family: "superclarendon";
+  font-weight: 600;
+  color: #7f7f7f;
+  font-style: italic;
+  font-size: 1em;
+  margin-top: 150px;
+}
+section.sponsors p {
+  font-size: .8em;
+  color: #7f7f7f;
 }
 footer {
   text-align: center;
