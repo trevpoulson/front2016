@@ -948,8 +948,8 @@ section.sponsors a {
   margin: 30px 40px;
   display: inline-block;
 }
-section.sponsors .pluralsight-logo {
-  width: 200px;
+section.sponsors img {
+  width: 150px;
 }
 section.sponsors h2 {
   font-family: "superclarendon";
