@@ -138,26 +138,31 @@ ol:not(:last-child) {
   display: none;
 }
 header,
-section,
-footer {
+section {
   padding: 3rem 1.5rem;
 }
 @media screen and (min-width: 600px) {
   header,
-  section,
-  footer {
+  section {
     padding: 3rem ;
   }
 }
 @media screen and (min-width: 900px) {
   header,
-  section,
-  footer {
+  section {
     padding: 9rem 3rem ;
   }
 }
 nav {
   margin-bottom: 2rem;
+}
+@media screen and (min-width: 900px) {
+  nav {
+    position: absolute;
+    width: 100%;
+    top: 75px;
+    max-height: 00px;
+  }
 }
 nav img {
   width: 12rem;
@@ -270,6 +275,35 @@ nav button::after {
     display: none;
   }
 }
+@media screen and (min-width: 900px) {
+  nav.affix {
+    position: fixed;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    top: 0;
+    left: 0;
+    max-height: 50px;
+  }
+  nav.affix:before,
+  nav.affix:after {
+    content: " ";
+    display: table;
+  }
+  nav.affix:after {
+    clear: both;
+  }
+  nav.affix img {
+    width: 11rem;
+    margin: 14px 0;
+  }
+  nav.affix ul {
+    margin: 0;
+    top: 0;
+  }
+  nav.affix ul a {
+    line-height: 50px;
+  }
+}
 header {
   background: #ff7d00 50% no-repeat;
   background-size: cover;
@@ -277,6 +311,7 @@ header {
 }
 @media screen and (min-width: 900px) {
   header {
+    padding-top: 19rem;
     background-image: url(../../images/header-background.jpg);
   }
 }
@@ -363,6 +398,17 @@ header .social .icon img {
 header .social .icon img:hover {
   opacity: 1;
 }
+header .sponsor {
+  color: #7f7f7f;
+  font-size: 14px;
+  margin-left: 3em;
+  float: left;
+}
+header .sponsor img {
+  width: 220px;
+  vertical-align: middle;
+  margin-left: 1em;
+}
 section.speakers {
   padding: 0;
 }
@@ -407,12 +453,8 @@ section.speakers .speaker .speaker-info {
 }
 @media screen and (min-width: 900px) {
   section.speakers .speaker .speaker-info {
-    max-height: 0;
     overflow: hidden;
     transition: 0.3s ease;
-  }
-  section.speakers .speaker .speaker-info.open {
-    max-height: 100px;
   }
 }
 section.speakers .speaker .speaker-info.primary h3 {
@@ -494,7 +536,8 @@ section.about ul {
 @media screen and (min-width: 900px) {
   section.about ul {
     padding: 0 2.5rem 3rem;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
+    max-width: 780px;
   }
 }
 @media screen and (min-width: 900px) {
@@ -508,7 +551,7 @@ section.about ul li {
   opacity: 0.6;
   font-weight: 500;
   line-height: 2em;
-  font-size: 1em;
+  font-size: 18px;
 }
 section.about ul li:not(:first-child):before {
   content: "•";
@@ -527,10 +570,11 @@ section.about p {
 }
 @media screen and (min-width: 900px) {
   section.about p {
-    max-width: 650px;
+    max-width: 500px;
     font-weight: 200;
     line-height: 1.5em;
     margin: 2em auto;
+    font-size: 18px;
   }
 }
 section.location {
@@ -602,11 +646,18 @@ section.location .place {
 section.highlights {
   text-align: center;
   background-image: url(../../images/bg-highlights.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-section.highlights img {
+section.highlights .logo {
   max-width: 350px;
   display: block;
-  margin: 0 auto 80px;
+  margin: 0 auto;
+}
+section.highlights .play {
+  width: 135px;
+  display: block;
+  margin: 80px auto;
 }
 section.highlights h1 {
   font-size: 2em;
@@ -805,12 +856,12 @@ section.schedule .time-primary {
 section.schedule .time-primary .time {
   color: #333;
   margin-bottom: .3rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 section.schedule .time-primary .event {
   margin-bottom: 1rem;
   color: #333;
-  font-weight: 400;
+  font-weight: 700;
 }
 @media screen and (min-width: 900px) {
   section.schedule div:before,
@@ -872,8 +923,14 @@ section.schedule .time-primary .event {
     padding-bottom: 1.5rem;
     line-height: 0;
   }
-  section.schedule .time-primary .event:before {
+  section.schedule .time-primary .event.primary:before {
     background-color: #ff7d00;
+  }
+  section.schedule .time-primary .event.secondary:before {
+    background-color: #1fbcff;
+  }
+  section.schedule .time-primary .event.tertiary:before {
+    background-color: #653789;
   }
 }
 section.sponsors {
@@ -908,6 +965,7 @@ section.sponsors p {
 }
 footer {
   text-align: center;
+  margin-bottom: 6rem;
 }
 footer h2 {
   font-family: "superclarendon";

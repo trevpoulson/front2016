@@ -173,7 +173,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol {
 }
 
 
-header, section, footer {
+header, section {
 	padding: 3rem 1.5rem;
 	@media screen and (min-width: @screen-sm) {
 		padding: 3rem ;
@@ -189,6 +189,12 @@ header, section, footer {
 
 nav {
 	margin-bottom: 2rem;
+	@media screen and (min-width: @screen-md) {
+		position: absolute;
+		width: 100%;
+		top: 75px;
+		max-height: 00px;
+	}
 	img {
 		width: 12rem;
 		@media screen and (min-width: @screen-sm) {
@@ -292,12 +298,35 @@ nav {
 			.hidden();
 		}
 	}
+	&.affix {
+		@media screen and (min-width: @screen-md) {
+			position: fixed;
+			z-index: 100;
+			background: fade(@color-white, 90%);
+			top: 0;
+			left: 0;
+			max-height: 50px;
+			.clearfix();
+			img {
+				width: 11rem;
+				margin: 14px 0;
+			}
+			ul {
+				margin: 0;
+				top: 0;
+				a {
+					line-height: 50px;
+				}
+			}
+		}
+	}
 }
 
 header {
 	.image-bg();
 	background-image: url(../../images/header-background-sm.jpg);
 	@media screen and (min-width: @screen-md) {
+		padding-top: 19rem;
 		background-image: url(../../images/header-background.jpg);
 	}
 	.clearfix();
@@ -364,6 +393,17 @@ header {
 			}
 		}
 	}
+	.sponsor {
+		color: @color-warm-gray;
+		font-size: 14px;
+		margin-left: 3em;
+		float: left;
+		img {
+			width: 220px;
+			vertical-align: middle;
+			margin-left: 1em;
+		}
+	}
 }
 
 section.speakers {
@@ -392,12 +432,8 @@ section.speakers {
 			bottom: 0;
 			width: 100%;
 			@media screen and (min-width: @screen-md) {
-				max-height: 0;
 				overflow: hidden;
 				transition: 0.3s ease;
-				&.open {
-					max-height: 100px;
-				}
 			}
 			
 			background-size: 100% 100%;
@@ -489,7 +525,8 @@ section.about {
 		border-bottom: solid 1px fade(@color-white, 60%);
 		@media screen and (min-width: @screen-md) {
 			padding: 0 2.5rem 3rem;
-			margin-bottom: 3rem;
+			margin: 0 auto 3rem;
+			max-width: 780px;
 		}
 		@media screen and (min-width: @screen-md) {
 			padding: 0 2rem 4rem;
@@ -500,7 +537,7 @@ section.about {
 			opacity: 0.6;
 			font-weight: 500;
 			line-height: 2em;
-			font-size: 1em;
+			font-size: 18px;
 
 		
 			&:not(:first-child):before { 
@@ -518,10 +555,11 @@ section.about {
 			margin-right: auto;
 		}
 		@media screen and (min-width: @screen-md) {
-			max-width: 650px;
+			max-width: 500px;
 			font-weight: 200;
 			line-height: 1.5em;
 			margin: 2em auto;
+			font-size: 18px;
 		}
 	}
 }
@@ -591,10 +629,17 @@ section.location {
 section.highlights {
 	text-align: center;
 	background-image: url(../../images/bg-highlights.jpg);
-	img {
+	background-repeat: no-repeat;
+	background-size: cover;
+	.logo {
 		max-width: 350px;
 		display: block;
-		margin: 0 auto 80px;
+		margin: 0 auto;
+	}
+	.play {
+		width: 135px;
+		display: block;
+		margin: 80px auto;
 	}
 
 	h1 {
@@ -792,13 +837,13 @@ section.schedule {
 		.time {
 			color: @color-gray-dark;
 			margin-bottom: .3rem;
-			font-weight: 400;
+			font-weight: 700;
 				
 		}
 		.event {
 			margin-bottom: 1rem;
 			color: @color-gray-dark;
-			font-weight: 400;
+			font-weight: 700;
 		}
 	}
 	@media screen and (min-width: @screen-md) {
@@ -858,8 +903,14 @@ section.schedule {
 				padding-bottom: 1.5rem;
 				line-height: 0;
 		}
-		.time-primary .event:before {
-			background-color: @color-orange;
+		.time-primary .event.primary:before {
+			background-color: @color-pumpkin;
+		}
+		.time-primary .event.secondary:before {
+			background-color: @color-sky;
+		}
+		.time-primary .event.tertiary:before {
+			background-color: @color-blueberry;
 		}
 	} 
 }
@@ -899,6 +950,7 @@ section.sponsors {
 
 footer {
 	text-align: center;
+	margin-bottom: 6rem;
 	h2 {
 		font-family: @font-serif;
 		font-size: 12px;
