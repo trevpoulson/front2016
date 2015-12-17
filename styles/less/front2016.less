@@ -195,8 +195,11 @@ nav {
 		top: 75px;
 		max-height: 00px;
 	}
-	img {
+	a.logo {
 		width: 12rem;
+		display: block;
+		float: left;
+		
 		@media screen and (min-width: @screen-sm) {
 			width: 20rem;
 			margin-bottom: 1rem;
@@ -204,6 +207,9 @@ nav {
 		}
 		@media screen and (min-width: @screen-sm) {
 			margin-bottom: 1rem;
+		}
+		img {
+			width: 100%;
 		}
 	}
 	ul{
@@ -307,7 +313,7 @@ nav {
 			left: 0;
 			max-height: 50px;
 			.clearfix();
-			img {
+			a.logo {
 				width: 11rem;
 				margin: 14px 0;
 			}
