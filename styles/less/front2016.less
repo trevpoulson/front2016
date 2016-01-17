@@ -386,14 +386,16 @@ header {
 		margin: @element-margin;
 		@media screen and (min-width: @screen-sm) {
 			float: left;
-			margin-left: 3rem;
+			margin-left: 2rem;
 		}
 		.icon {
 			display: inline-block;
-			margin-right: 1em;
+			margin-right: .5em;
 			width: 2em;
 			img {
 				opacity: 0.8;
+				max-height: 24px;
+				margin-top: 11px;
 				&:hover {
 					opacity: 1;
 				}
@@ -403,7 +405,7 @@ header {
 	.sponsor {
 		color: @color-warm-gray;
 		font-size: 14px;
-		margin-left: 3em;
+		margin-left: 5em;
 		float: left;
 		img {
 			width: 220px;
