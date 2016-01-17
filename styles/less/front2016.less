@@ -133,7 +133,7 @@ body {
 .btn--orange-outline{
 	.btn();
 	background-color: transparent;
-	border: solid 2px @color-orange;
+	border: solid 1px @color-orange;
 	color: @color-orange;
 
 	outline: none;
@@ -204,6 +204,7 @@ nav {
 			width: 20rem;
 			margin-bottom: 1rem;
 			margin-top: 3em;
+			margin-left: -2em;
 		}
 		@media screen and (min-width: @screen-sm) {
 			margin-bottom: 1rem;
@@ -309,7 +310,7 @@ nav {
 		@media screen and (min-width: @screen-md) {
 			position: fixed;
 			z-index: 100;
-			background: fade(@color-white, 90%);
+			background: fade(@color-white, 95%);
 			top: 0;
 			left: 0;
 			max-height: 90px;
@@ -333,7 +334,7 @@ header {
 	.image-bg();
 	background-image: url(../../images/header-background-sm.jpg);
 	@media screen and (min-width: @screen-md) {
-		padding-top: 19rem;
+		padding-top: 15rem;
 		background-image: url(../../images/header-background.jpg);
 	}
 	.clearfix();
@@ -819,12 +820,14 @@ section.schedule {
 	.day {
 		font-size: .6em;
 		display: block;
+		font-weight: 100;
+		margin-top: 5px;
 	}
 	button {
-		text-transform: capitalize;
+		text-transform: uppercase;
 	}
 	button:not(:last-child) {
-		margin-right: 0.5rem;
+		margin-right: 2rem;
 	}
 	.time-secondary {
 		padding: 1rem 0 0;
@@ -868,23 +871,23 @@ section.schedule {
 			display: inline-block;
 		}
 		.time.time {
-			width: 50%;
+			width: 45%;
 			float: left;
 			text-align: right;
 			font-size: 0.7em;
-			padding: 0 24px;
+			padding: 0 38px;
 			margin: 0;
 			line-height: 3rem;
 			margin-right: -.5em;
-			border-right: solid 2px @color-gray-medium;
+			border-right: solid 1px @color-gray-medium;
 
 		}
 
 		.event.event {
-			width: 50%;
+			width: 55%;
 			float: right;
 			text-align: left;
-			padding: 0 24px;
+			padding: 0 38px;
 			margin: 0;
 			line-height: 3rem;
 			position: relative;
