@@ -494,10 +494,11 @@ section.speakers .speaker h3 {
 section.speakers .speaker h4 {
   font-size: 14px;
   color: #fff;
-  font-weight: 300;
+  font-weight: 100;
   margin: 0;
   padding: 5px 20px;
   height: 50px;
+  letter-spacing: 1px;
 }
 section.about {
   background: #ff7d00 50% no-repeat;
