@@ -355,6 +355,7 @@ header h3 {
   font-weight: 200;
   color: #a9a9a9;
   font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 @media screen and (min-width: 600px) {
@@ -1046,11 +1047,34 @@ footer .dash-breaker {
     padding: 100px 0;
   }
 }
+.bios .bio .left-arrow,
+.bios .bio .right-arrow {
+  display: block;
+  opacity: 0.3;
+  transition: 0.3s cubic-bezier(0.76, 0.01, 0.3, 1);
+}
+.bios .bio .left-arrow:hover,
+.bios .bio .right-arrow:hover {
+  opacity: 1;
+}
+.bios .bio .left-arrow img,
+.bios .bio .right-arrow img {
+  width: 50px;
+}
+.bios .bio .left-arrow {
+  float: left;
+  margin: 130px 0 0 -100px;
+}
+.bios .bio .right-arrow {
+  float: right;
+  margin: 130px -100px 0 0;
+}
 .bios .bio .picture {
   max-width: 100%;
   width: 367px;
   border-radius: 50%;
-  border: solid 10px gray;
+  border: solid 20px gray;
+  margin-bottom: 24px;
 }
 .bios .bio h1 {
   font-weight: 200;
@@ -1066,14 +1090,17 @@ footer .dash-breaker {
   font-size: 18px;
   color: #7f7f7f;
 }
+.bios .bio .social-links {
+  margin-bottom: 24px;
+}
 .bios .bio .social-links .icon {
-  width: 32px;
+  width: 24px;
   display: inline-block;
-  margin: 0 12px 24px;
+  margin: 0 12px;
 }
 @media screen and (min-width: 900px) {
   .bios .bio .social-links {
-    padding-bottom: 76px;
+    margin-bottom: 56px;
   }
 }
 .bios .bio p {
