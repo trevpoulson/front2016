@@ -174,6 +174,7 @@ nav a.logo {
     width: 20rem;
     margin-bottom: 1rem;
     margin-top: 3em;
+    margin-left: -2em;
   }
 }
 @media screen and (min-width: 600px) {
@@ -222,15 +223,16 @@ nav li a {
   border-bottom: solid 1px #ff7d00;
   line-height: 50px;
   text-align: center;
+  letter-spacing: 1px;
 }
 @media screen and (min-width: 900px) {
   nav li a {
-    color: #a9a9a9;
+    color: #7f7f7f;
     border: none;
     display: inline-block;
     line-height: 100px;
     padding: 0 1.5em;
-    font-size: 16px;
+    font-size: 14px;
   }
   nav li a:hover {
     color: #333;
@@ -284,10 +286,10 @@ nav button::after {
   nav.affix {
     position: fixed;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     top: 0;
     left: 0;
-    max-height: 50px;
+    max-height: 90px;
   }
   nav.affix:before,
   nav.affix:after {
@@ -299,14 +301,14 @@ nav button::after {
   }
   nav.affix a.logo {
     width: 11rem;
-    margin: 14px 0;
+    margin: 31px 0;
   }
   nav.affix ul {
     margin: 0;
     top: 0;
   }
   nav.affix ul a {
-    line-height: 50px;
+    line-height: 87px;
   }
 }
 header {
@@ -316,7 +318,7 @@ header {
 }
 @media screen and (min-width: 900px) {
   header {
-    padding-top: 19rem;
+    padding-top: 15rem;
     background-image: url(../../images/header-background.jpg);
   }
 }
@@ -389,16 +391,18 @@ header .social {
 @media screen and (min-width: 600px) {
   header .social {
     float: left;
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
 }
 header .social .icon {
   display: inline-block;
-  margin-right: 1em;
+  margin-right: .5em;
   width: 2em;
 }
 header .social .icon img {
   opacity: 0.8;
+  max-height: 24px;
+  margin-top: 11px;
 }
 header .social .icon img:hover {
   opacity: 1;
@@ -406,7 +410,7 @@ header .social .icon img:hover {
 header .sponsor {
   color: #7f7f7f;
   font-size: 14px;
-  margin-left: 3em;
+  margin-left: 5em;
   float: left;
 }
 header .sponsor img {
@@ -490,10 +494,11 @@ section.speakers .speaker h3 {
 section.speakers .speaker h4 {
   font-size: 14px;
   color: #fff;
-  font-weight: 300;
+  font-weight: 100;
   margin: 0;
-  padding: 5px 20px;
+  padding: 8px 20px;
   height: 50px;
+  letter-spacing: 1px;
 }
 section.about {
   background: #ff7d00 50% no-repeat;
@@ -834,12 +839,15 @@ section.schedule h1 {
 section.schedule .day {
   font-size: .6em;
   display: block;
+<<<<<<< HEAD
   text-transform: uppercase;
+=======
+>>>>>>> master
   font-weight: 100;
   margin-top: 5px;
 }
 section.schedule button {
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 section.schedule button:not(:last-child) {
   margin-right: 2rem;
@@ -898,7 +906,7 @@ section.schedule .time-primary .event {
     margin: 0;
     line-height: 3rem;
     margin-right: -0.5em;
-    border-right: solid 2px #a9a9a9;
+    border-right: solid 1px #a9a9a9;
   }
   section.schedule .event.event {
     width: 55%;
@@ -989,7 +997,7 @@ footer img {
 footer p {
   color: #a9a9a9;
   margin-bottom: .5em;
-  font-size: 16px;
+  font-size: 12px;
 }
 footer a {
   text-decoration: none;
@@ -1009,4 +1017,62 @@ footer .dash-breaker {
     content: "/";
     margin: 0em;
   }
+}
+/****************************** Bios ******************************/
+.bios header {
+  padding: 50px 0;
+}
+.bios nav.affix-top .logo {
+  position: absolute;
+  top: -55px;
+  width: 11rem;
+  margin: 14px 0;
+}
+.bios .bio {
+  max-width: 548px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.bios .bio .picture {
+  width: 367px;
+  border-radius: 50%;
+  border: solid 10px gray;
+}
+.bios .bio h1 {
+  font-weight: 200;
+  font-size: 70px;
+}
+.bios .bio h2 {
+  font-weight: 300;
+  font-size: 18px;
+  color: #7f7f7f;
+}
+.bios .bio .social-links .icon {
+  width: 32px;
+  display: inline-block;
+  margin: 0 12px 76px;
+}
+.bios .bio p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+}
+.bios .bio.primary .picture {
+  border-color: #ff7d00;
+}
+.bios .bio.primary h1 {
+  color: #ff7d00;
+}
+.bios .bio.secondary .picture {
+  border-color: #006f9e;
+}
+.bios .bio.secondary h1 {
+  color: #006f9e;
+}
+.bios .bio.tertiary .picture {
+  border-color: #653789;
+}
+.bios .bio.tertiary h1 {
+  color: #653789;
 }

@@ -203,6 +203,7 @@ nav {
 			width: 20rem;
 			margin-bottom: 1rem;
 			margin-top: 3em;
+			margin-left: -2em;
 		}
 		@media screen and (min-width: @screen-sm) {
 			margin-bottom: 1rem;
@@ -246,13 +247,14 @@ nav {
 			border-bottom: solid 1px @color-orange;
 			line-height: 50px;
 			text-align: center;
+			letter-spacing: 1px;
 			@media screen and (min-width: @screen-md) {
-				color: @color-gray-medium;
+				color: @color-warm-gray;
 				border: none;
 				display: inline-block;
 				line-height: 100px;
 				padding: 0 1.5em;
-				font-size: 16px;
+				font-size: 14px;
 				&:hover {
 					color: @color-gray-dark;
 				}
@@ -307,20 +309,20 @@ nav {
 		@media screen and (min-width: @screen-md) {
 			position: fixed;
 			z-index: 100;
-			background: fade(@color-white, 90%);
+			background: fade(@color-white, 95%);
 			top: 0;
 			left: 0;
-			max-height: 50px;
+			max-height: 90px;
 			.clearfix();
 			a.logo {
 				width: 11rem;
-				margin: 14px 0;
+				margin: 31px 0;
 			}
 			ul {
 				margin: 0;
 				top: 0;
 				a {
-					line-height: 50px;
+					line-height: 87px;
 				}
 			}
 		}
@@ -331,7 +333,7 @@ header {
 	.image-bg();
 	background-image: url(../../images/header-background-sm.jpg);
 	@media screen and (min-width: @screen-md) {
-		padding-top: 19rem;
+		padding-top: 15rem;
 		background-image: url(../../images/header-background.jpg);
 	}
 	.clearfix();
@@ -384,14 +386,16 @@ header {
 		margin: @element-margin;
 		@media screen and (min-width: @screen-sm) {
 			float: left;
-			margin-left: 3rem;
+			margin-left: 2rem;
 		}
 		.icon {
 			display: inline-block;
-			margin-right: 1em;
+			margin-right: .5em;
 			width: 2em;
 			img {
 				opacity: 0.8;
+				max-height: 24px;
+				margin-top: 11px;
 				&:hover {
 					opacity: 1;
 				}
@@ -401,7 +405,7 @@ header {
 	.sponsor {
 		color: @color-warm-gray;
 		font-size: 14px;
-		margin-left: 3em;
+		margin-left: 5em;
 		float: left;
 		img {
 			width: 220px;
@@ -483,10 +487,11 @@ section.speakers {
 		h4{
 			font-size: 14px;
 			color: @color-white;
-			font-weight: 300;
+			font-weight: 100;
 			margin: 0;
-			padding: 5px 20px;
+			padding: 8px 20px;
 			height: 50px;
+			letter-spacing: 1px;
 		}
 	}
 }
@@ -815,12 +820,15 @@ section.schedule {
 	.day {
 		font-size: .6em;
 		display: block;
+<<<<<<< HEAD
 		text-transform: uppercase;
+=======
+>>>>>>> master
 		font-weight: 100;
 		margin-top: 5px;
 	}
 	button {
-		text-transform: capitalize;
+		text-transform: uppercase;
 	}
 	button:not(:last-child) {
 		margin-right: 2rem;
@@ -875,7 +883,7 @@ section.schedule {
 			margin: 0;
 			line-height: 3rem;
 			margin-right: -.5em;
-			border-right: solid 2px @color-gray-medium;
+			border-right: solid 1px @color-gray-medium;
 
 		}
 
@@ -973,7 +981,7 @@ footer {
 	p {
 		color: @color-gray-medium;
 		margin-bottom: .5em;
-		font-size: 16px;
+		font-size: 12px;
 	}
 	a {
 		text-decoration: none;
@@ -996,6 +1004,78 @@ footer {
 }
 
 
+
+/****************************** Bios ******************************/
+.bios {
+	header {
+		padding: 50px 0;
+	}
+	nav.affix-top .logo {
+		position: absolute;
+		top: -55px;
+		width: 11rem;
+		margin: 14px 0;
+	}
+	.bio{
+		max-width: 548px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 100px 0;
+		.picture{
+			width: 367px;
+			border-radius: 50%;
+			border: solid 10px gray;
+			
+
+		}
+		h1{
+			font-weight: 200;
+			font-size: 70px;
+		}
+		h2{
+			font-weight: 300;
+			font-size: 18px;
+			color: @color-warm-gray;
+		}
+		.social-links{
+			.icon{
+				width: 32px;
+				display: inline-block;
+				margin: 0 12px 76px;
+			}
+		}
+		p{
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		&.primary {
+			.picture {
+				border-color: @color-orange;
+			}
+			h1 {
+				color: @color-orange;
+			}
+		}
+		&.secondary {
+			.picture {
+				border-color: @color-evening;
+			}
+			h1 {
+				color: @color-evening;
+			}
+		}
+		&.tertiary {
+			.picture {
+				border-color: @color-blueberry;
+			}
+			h1 {
+				color: @color-blueberry;
+			}
+		}
+	}
+
+}
 
 
 
