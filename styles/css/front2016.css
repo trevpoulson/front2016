@@ -840,8 +840,12 @@ section.schedule .day {
   font-size: .6em;
   display: block;
 <<<<<<< HEAD
+<<<<<<< HEAD
   text-transform: uppercase;
 =======
+>>>>>>> master
+=======
+  text-transform: uppercase;
 >>>>>>> master
   font-weight: 100;
   margin-top: 5px;
@@ -1020,28 +1024,49 @@ footer .dash-breaker {
 }
 /****************************** Bios ******************************/
 .bios header {
-  padding: 50px 0;
+  padding: 30px 0 10px;
+}
+@media screen and (min-width: 900px) {
+  .bios header {
+    padding: 50px 0;
+  }
 }
 .bios nav.affix-top .logo {
-  position: absolute;
-  top: -55px;
-  width: 11rem;
-  margin: 14px 0;
+  margin-top: -10px;
+}
+@media screen and (min-width: 900px) {
+  .bios nav.affix-top .logo {
+    position: absolute;
+    top: -55px;
+    width: 11rem;
+    margin: 14px 0;
+  }
 }
 .bios .bio {
   max-width: 548px;
   text-align: center;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 20px 12px;
+}
+@media screen and (min-width: 900px) {
+  .bios .bio {
+    padding: 100px 0;
+  }
 }
 .bios .bio .picture {
+  max-width: 100%;
   width: 367px;
   border-radius: 50%;
   border: solid 10px gray;
 }
 .bios .bio h1 {
   font-weight: 200;
-  font-size: 70px;
+  font-size: 40px;
+}
+@media screen and (min-width: 900px) {
+  .bios .bio h1 {
+    font-size: 70px;
+  }
 }
 .bios .bio h2 {
   font-weight: 300;
@@ -1051,7 +1076,12 @@ footer .dash-breaker {
 .bios .bio .social-links .icon {
   width: 32px;
   display: inline-block;
-  margin: 0 12px 76px;
+  margin: 0 12px 24px;
+}
+@media screen and (min-width: 900px) {
+  .bios .bio .social-links {
+    padding-bottom: 76px;
+  }
 }
 .bios .bio p {
   font-weight: 300;
