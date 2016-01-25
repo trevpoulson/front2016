@@ -329,6 +329,7 @@ nav {
 	}
 }
 
+
 header {
 	.image-bg();
 	background-image: url(../../images/header-background-sm.jpg);
@@ -357,6 +358,7 @@ header {
 		font-weight: 200;
 		color: @color-gray-medium;
 		font-size: 14px;
+		letter-spacing: 1px;
 		text-transform: uppercase;;
 		@media screen and (min-width: @screen-sm) {
 			margin: 2em 0 !important; 
@@ -1035,12 +1037,37 @@ footer {
 		@media screen and (min-width: @screen-md) {
 			padding: 100px 0;
 		}
+		.top {
+
+		}
+		.left-arrow, .right-arrow{
+			display: block;
+			opacity: 0.3;
+			transition: 0.3s @easing;
+			&:hover {
+				opacity: 1;
+			}
+			img {
+				width: 50px;	
+			}
+			
+		}
+		.left-arrow{
+			float: left;
+			margin: 130px 0 0 -100px;
+			
+		}
+		.right-arrow{
+			float: right;
+			margin: 130px -100px 0 0;
+			
+		}
 		.picture{
 			max-width: 100%;
 			width: 367px;
 			border-radius: 50%;
-			border: solid 10px gray;
-			
+			border: solid 20px gray;
+			margin-bottom: 24px;
 
 		}
 		h1{
@@ -1057,13 +1084,14 @@ footer {
 			color: @color-warm-gray;
 		}
 		.social-links{
+			margin-bottom: 24px;
 			.icon{
-				width: 32px;
+				width: 24px;
 				display: inline-block;
-				margin: 0 12px 24px;
+				margin: 0 12px;
 			}
 			@media screen and (min-width: @screen-md) {
-				padding-bottom: 76px;
+				margin-bottom: 56px;
 			}
 		}
 		p{
