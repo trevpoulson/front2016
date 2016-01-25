@@ -1002,6 +1002,78 @@ footer {
 
 
 
+/****************************** Bios ******************************/
+.bios {
+	header {
+		padding: 50px 0;
+	}
+	nav.affix-top .logo {
+		position: absolute;
+		top: -55px;
+		width: 11rem;
+		margin: 14px 0;
+	}
+	.bio{
+		max-width: 548px;
+		text-align: center;
+		margin: 0 auto;
+		padding: 100px 0;
+		.picture{
+			width: 367px;
+			border-radius: 50%;
+			border: solid 10px gray;
+			
+
+		}
+		h1{
+			font-weight: 200;
+			font-size: 70px;
+		}
+		h2{
+			font-weight: 300;
+			font-size: 18px;
+			color: @color-warm-gray;
+		}
+		.social-links{
+			.icon{
+				width: 32px;
+				display: inline-block;
+				margin: 0 12px 76px;
+			}
+		}
+		p{
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 30px;
+		}
+		&.primary {
+			.picture {
+				border-color: @color-orange;
+			}
+			h1 {
+				color: @color-orange;
+			}
+		}
+		&.secondary {
+			.picture {
+				border-color: @color-evening;
+			}
+			h1 {
+				color: @color-evening;
+			}
+		}
+		&.tertiary {
+			.picture {
+				border-color: @color-blueberry;
+			}
+			h1 {
+				color: @color-blueberry;
+			}
+		}
+	}
+
+}
+
 
 
 

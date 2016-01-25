@@ -1014,3 +1014,61 @@ footer .dash-breaker {
     margin: 0em;
   }
 }
+/****************************** Bios ******************************/
+.bios header {
+  padding: 50px 0;
+}
+.bios nav.affix-top .logo {
+  position: absolute;
+  top: -55px;
+  width: 11rem;
+  margin: 14px 0;
+}
+.bios .bio {
+  max-width: 548px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.bios .bio .picture {
+  width: 367px;
+  border-radius: 50%;
+  border: solid 10px gray;
+}
+.bios .bio h1 {
+  font-weight: 200;
+  font-size: 70px;
+}
+.bios .bio h2 {
+  font-weight: 300;
+  font-size: 18px;
+  color: #7f7f7f;
+}
+.bios .bio .social-links .icon {
+  width: 32px;
+  display: inline-block;
+  margin: 0 12px 76px;
+}
+.bios .bio p {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+}
+.bios .bio.primary .picture {
+  border-color: #ff7d00;
+}
+.bios .bio.primary h1 {
+  color: #ff7d00;
+}
+.bios .bio.secondary .picture {
+  border-color: #006f9e;
+}
+.bios .bio.secondary h1 {
+  color: #006f9e;
+}
+.bios .bio.tertiary .picture {
+  border-color: #653789;
+}
+.bios .bio.tertiary h1 {
+  color: #653789;
+}
