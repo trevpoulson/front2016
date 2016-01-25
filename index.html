@@ -407,7 +407,32 @@
         <script src="https://use.typekit.net/ekw2vnc.js"></script>
 		<!--<script src="https://use.typekit.net/cwj6ram.js"></script>-->
 		<script>try{Typekit.load({ async: true });}catch(e){}</script>
-		
+		<script>
+		$(function(){
+			$('.toggleNav').click(function(event) {
+				$('body').toggleClass('open');
+			});
+
+			$('.navigation').click(function(event) {
+				$('body').removeClass('open');
+			}); 
+			
+			$('.navigation a').click(function(event) {
+				event.preventDefault();
+				$(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
+
+			});
+			$('nav').affix({
+			 	offset: {
+					top: $('header').outerHeight() - 50
+				}
+			})
+
+			$('.play').click(function(event) {
+				$('.highlights').html('<div class="video"><iframe src="https://player.vimeo.com/video/140530649?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>')
+			});
+		});
+		</script>
 	</body>
 </html>
 

@@ -1032,11 +1032,11 @@ footer .dash-breaker {
     padding: 50px 0;
   }
 }
-.bios nav.affix-top .logo {
+.bios nav .logo {
   margin-top: -10px;
 }
 @media screen and (min-width: 900px) {
-  .bios nav.affix-top .logo {
+  .bios nav .logo {
     position: absolute;
     top: -55px;
     width: 11rem;
