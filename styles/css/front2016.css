@@ -536,7 +536,7 @@ section.talks .details img {
   border-style: solid;
   width: 50px;
   vertical-align: middle;
-  margin-right: 20px;
+  margin-right: 18px;
 }
 section.talks .details img.orange {
   border-color: #ff7d00;
@@ -548,8 +548,17 @@ section.talks .details img.blue {
   border-color: #653789;
 }
 section.talks .details .master {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 100;
+}
+section.talks .details .master.orange {
+  color: #ff7d00;
+}
+section.talks .details .master.purple {
+  color: #006f9e;
+}
+section.talks .details .master.blue {
+  color: #653789;
 }
 section.talks .details h3 {
   font-weight: 400;
