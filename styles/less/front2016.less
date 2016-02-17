@@ -516,10 +516,15 @@ section.talks {
 		}
 		img {
 			border-radius: 50px;
-			border: 4px solid #000;
+			border-width: 4px;
+			border-style: solid;
 			width: 50px;
 			vertical-align: middle;
 			margin-right: 20px;
+			
+			&.orange { border-color: @color-orange; }
+			&.purple { border-color: @color-evening; }
+			&.blue { border-color: @color-blueberry; }
 		}
 		.master { 
 			font-size: 24px;
