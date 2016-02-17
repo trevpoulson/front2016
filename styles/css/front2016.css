@@ -840,14 +840,7 @@ section.schedule h1 {
 section.schedule .day {
   font-size: .6em;
   display: block;
-<<<<<<< HEAD
-<<<<<<< HEAD
   text-transform: uppercase;
-=======
->>>>>>> master
-=======
-  text-transform: uppercase;
->>>>>>> master
   font-weight: 100;
   margin-top: 5px;
 }
@@ -1110,7 +1103,8 @@ footer .dash-breaker {
     margin-bottom: 56px;
   }
 }
-.bios .bio p {
+.bios .bio p,
+.bios .bio li {
   font-weight: 300;
   font-size: 18px;
   line-height: 30px;
