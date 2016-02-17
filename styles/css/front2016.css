@@ -501,6 +501,58 @@ section.speakers .speaker h4 {
   height: 50px;
   letter-spacing: 1px;
 }
+section.talks:before,
+section.talks:after {
+  content: " ";
+  display: table;
+}
+section.talks:after {
+  clear: both;
+}
+section.talks .details {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 50px;
+}
+@media screen and (min-width: 600px) {
+  section.talks .details {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  section.talks .details {
+    width: 25%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  section.talks .details {
+    width: 20%;
+  }
+}
+section.talks .details img {
+  border-radius: 50px;
+  border: 4px solid #000;
+  width: 50px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+section.talks .details .master {
+  font-size: 24px;
+  font-weight: 100;
+}
+section.talks .details h3 {
+  font-weight: 400;
+  margin: 25px 0px 10px 0px;
+}
+section.talks .details p {
+  font-weight: 200;
+}
+section.talks .details h3,
+section.talks .details p {
+  font-size: 14px;
+  line-height: 18px;
+}
 section.about {
   background: #ff7d00 50% no-repeat;
   background-size: cover;

@@ -498,6 +498,47 @@ section.speakers {
 	}
 }
 
+section.talks {
+	.clearfix();
+	.details {
+		position: relative;
+		float: left;
+		width: 100%;
+		padding: 50px;
+		@media screen and (min-width: @screen-sm) {
+			width: 50%;
+		}
+		@media screen and (min-width: @screen-md) {
+			width: 25%;
+		}
+		@media screen and (min-width: @screen-xl) {
+			width: 20%;
+		}
+		img {
+			border-radius: 50px;
+			border: 4px solid #000;
+			width: 50px;
+			vertical-align: middle;
+			margin-right: 20px;
+		}
+		.master { 
+			font-size: 24px;
+			font-weight: 100; 
+		}
+		h3 {
+			font-weight: 400;
+			margin: 25px 0px 10px 0px;
+		}
+		p {
+			font-weight: 200;
+		}
+		h3, p {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+}
+
 section.about {
 	.image-bg();
 	background-image: url(../../images/bg-about.jpg);
