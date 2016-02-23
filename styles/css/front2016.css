@@ -515,6 +515,15 @@ section.speakers h1 {
   font-weight: 200;
   text-align: center;
 }
+section.speakers h1.orange {
+  color: #ff7d00;
+}
+section.speakers h1.purple {
+  color: #653789;
+}
+section.speakers h1.blue {
+  color: #006f9e;
+}
 section.speakers .speaker {
   position: relative;
   float: left;
@@ -566,9 +575,9 @@ section.speakers .speaker .speaker-info {
 }
 section.speakers .speaker h3 {
   font-size: 24px;
-  font-weight: 500;
+  font-weight: 100;
   margin: 0;
-  padding: 20px 20px;
+  padding: 40px 20px 0px 20px;
 }
 section.speakers .speaker h3.orange {
   color: #ff7d00;
@@ -582,7 +591,7 @@ section.speakers .speaker h3.blue {
 section.speakers .speaker h4 {
   font-size: 14px;
   color: #7f7f7f;
-  font-weight: 100;
+  font-weight: 200;
   margin: 0;
   padding: 8px 20px;
   height: 50px;
