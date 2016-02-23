@@ -419,9 +419,88 @@ header .sponsor img {
   vertical-align: middle;
   margin-left: 1em;
 }
+/*
 section.speakers {
-  padding: 0;
+	padding: 0;
+	.clearfix();
+	.speaker {
+		position: relative;
+		float: left;
+		width: 100%;
+		@media screen and (min-width: @screen-sm) {
+			width: 50%;
+		}
+		@media screen and (min-width: @screen-md) {
+			width: 25%;
+		}
+		@media screen and (min-width: @screen-xl) {
+			width: 20%;
+		}
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+		.speaker-info {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			@media screen and (min-width: @screen-md) {
+				overflow: hidden;
+				transition: 0.3s ease;
+			}
+			
+			background-size: 100% 100%;
+			&.primary {
+				// background-color: fade(@color-orange, 80%);
+				// background-image: url(../../images/namebackground-orange.svg);
+				h3 {
+					background: @color-orange;
+				}
+				h4 {
+					background-color: fade(@color-orange, 70%);
+				}
+			}
+			&.secondary {
+				// background-color: fade(@color-orange, 80%);
+				// background-image: url(../../images/namebackground-orange.svg);
+				h3 {
+					background: @color-evening;
+				}
+				h4 {
+					background-color: fade(@color-evening, 70%);
+				}
+			}
+			&.tertiary {
+				// background-color: fade(@color-orange, 80%);
+				// background-image: url(../../images/namebackground-orange.svg);
+				h3 {
+					background: @color-blueberry;
+				}
+				h4 {
+					background-color: fade(@color-blueberry, 70%);
+				}
+			}
+		}
+		h3{
+			font-size: 20px;
+			font-weight: 500;
+			color: @color-white;
+			margin: 0;
+			padding: 5px 20px;
+		}
+		h4{
+			font-size: 14px;
+			color: @color-white;
+			font-weight: 100;
+			margin: 0;
+			padding: 8px 20px;
+			height: 50px;
+			letter-spacing: 1px;
+		}
+	}
 }
+*/
 section.speakers:before,
 section.speakers:after {
   content: " ";
@@ -430,10 +509,18 @@ section.speakers:after {
 section.speakers:after {
   clear: both;
 }
+section.speakers h1 {
+  font-size: 2em;
+  color: #ff7d00;
+  font-weight: 200;
+  text-align: center;
+}
 section.speakers .speaker {
   position: relative;
   float: left;
   width: 100%;
+  margin: 50px;
+  text-decoration: none;
 }
 @media screen and (min-width: 600px) {
   section.speakers .speaker {
@@ -454,52 +541,53 @@ section.speakers .speaker img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 200px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #f90;
+}
+section.speakers .speaker img.orange {
+  border-color: #ff7d00;
+}
+section.speakers .speaker img.purple {
+  border-color: #653789;
+}
+section.speakers .speaker img.blue {
+  border-color: #006f9e;
 }
 section.speakers .speaker .speaker-info {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  background-size: 100% 100%;
+  text-align: center;
 }
 @media screen and (min-width: 900px) {
   section.speakers .speaker .speaker-info {
     overflow: hidden;
-    transition: 0.3s ease;
   }
 }
-section.speakers .speaker .speaker-info.primary h3 {
-  background: #ff7d00;
-}
-section.speakers .speaker .speaker-info.primary h4 {
-  background-color: rgba(255, 125, 0, 0.7);
-}
-section.speakers .speaker .speaker-info.secondary h3 {
-  background: #006f9e;
-}
-section.speakers .speaker .speaker-info.secondary h4 {
-  background-color: rgba(0, 111, 158, 0.7);
-}
-section.speakers .speaker .speaker-info.tertiary h3 {
-  background: #653789;
-}
-section.speakers .speaker .speaker-info.tertiary h4 {
-  background-color: rgba(101, 55, 137, 0.7);
-}
 section.speakers .speaker h3 {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
-  color: #fff;
   margin: 0;
-  padding: 5px 20px;
+  padding: 20px 20px;
+}
+section.speakers .speaker h3.orange {
+  color: #ff7d00;
+}
+section.speakers .speaker h3.purple {
+  color: #653789;
+}
+section.speakers .speaker h3.blue {
+  color: #006f9e;
 }
 section.speakers .speaker h4 {
   font-size: 14px;
-  color: #fff;
+  color: #7f7f7f;
   font-weight: 100;
   margin: 0;
   padding: 8px 20px;
   height: 50px;
   letter-spacing: 1px;
+  line-height: 20px;
 }
 section.talks {
   background-color: #f7f7f7;
@@ -551,23 +639,23 @@ section.talks .details img.orange {
   border-color: #ff7d00;
 }
 section.talks .details img.purple {
-  border-color: #006f9e;
-}
-section.talks .details img.blue {
   border-color: #653789;
 }
+section.talks .details img.blue {
+  border-color: #006f9e;
+}
 section.talks .details .master {
-  font-size: 22px;
+  font-size: 19px;
   font-weight: 100;
 }
 section.talks .details .master.orange {
   color: #ff7d00;
 }
 section.talks .details .master.purple {
-  color: #006f9e;
+  color: #653789;
 }
 section.talks .details .master.blue {
-  color: #653789;
+  color: #006f9e;
 }
 section.talks .details h3 {
   font-weight: 400;
