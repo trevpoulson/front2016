@@ -528,7 +528,7 @@ section.speakers .speaker {
   position: relative;
   float: left;
   width: 100%;
-  margin: 50px;
+  padding: 50px;
   text-decoration: none;
 }
 @media screen and (min-width: 600px) {
@@ -574,7 +574,7 @@ section.speakers .speaker .speaker-info {
   }
 }
 section.speakers .speaker h3 {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 100;
   margin: 0;
   padding: 40px 20px 0px 20px;
